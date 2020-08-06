@@ -35,6 +35,110 @@ public class MainTestCases extends CommonAPI {
     public static WebElement sell;
     @FindBy(xpath = "//span[@class ='l-hero__title']")
     public static WebElement sellheader;
+    @FindBy(xpath = "//div[@class = 'gh-menu']")
+    public static WebElement myEbay;
+    @FindBy(xpath = "(//li[@class = 'hl-cat-nav__js-tab'])[1]")
+    public static WebElement motorsBotton;
+    @FindBy(xpath = "(//li[@class ='hl-cat-nav__js-tab'])[2]")
+    public static WebElement fashionBotton;
+    @FindBy (xpath = "(//li[@class ='hl-cat-nav__js-tab'])[3]")
+    public static WebElement electronicBotton;
+    @FindBy (xpath = "(//li[@class ='hl-cat-nav__js-tab'])[4]")
+    public static WebElement collectiblesBotton;
+    @FindBy (xpath = "(//li[@class ='hl-cat-nav__js-tab'])[5]")
+    public static WebElement homeGardenBotton;
+    @FindBy (xpath = "(//li[@class ='hl-cat-nav__js-tab'])[6]")
+    public static WebElement sportingBotton;
+    @FindBy (xpath = "(//li[@class ='hl-cat-nav__js-tab'])[7]")
+    public static WebElement toysBotton;
+    @FindBy (xpath = "(//li[@class ='hl-cat-nav__js-tab'])[8]")
+    public static WebElement bussinesBotton;
+    @FindBy (xpath = "(//li[@class ='hl-cat-nav__js-tab'])[9]")
+    public static WebElement musicBotton;
+    @FindBy (xpath = "(//li[@class ='hl-cat-nav__js-tab'])[10]")
+    public static WebElement dealsBotton;
+    @FindBy (xpath = "(//div[@class ='gh-menu'])[3]")
+    public static WebElement shoppingCart;
+    @FindBy (xpath = "//a[@class='start-shop btn btn--faux']")
+    public static WebElement startShopBotton;
+    @FindBy (xpath = "//h2[@class= 'ebayui-ellipsis-2']")
+    public static WebElement startHeader;
+    @FindBy (xpath = " //a[@class= 'sign-in btn btn--faux btn--primary']")
+    public static WebElement signInBotton;
+    @FindBy (xpath = "(//h3[@class='s-item__title s-item__title--has-tags'])[3]")
+    public static WebElement daybedElem;
+
+    public void searchEmbroidered(){
+        searchBox.sendKeys("embroidered", Keys.ENTER);
+        Assert.assertTrue(header.getText().contains("embroidered"));
+    }
+
+    public void searchDayBed(){
+        searchBox.sendKeys("daybed", Keys.ENTER);
+        daybedElem.click();
+
+    }
+    public void startShoppingSec(){
+        shoppingCart.click();
+        signInBotton.click();
+        Assert.assertTrue(header.getText().contains("Please verify yourself to continue"));
+    }
+    public void startShopping(){
+        shoppingCart.click();
+        startShopBotton.click();
+        Assert.assertTrue(startHeader.getText().contains("Shopping is better with coupons"));
+    }
+    public void searchShoppingBotton(){
+        shoppingCart.click();
+        Assert.assertTrue(header.getText().contains("Shopping cart"));
+    }
+    public void searchMusicBotton(){
+        musicBotton.click();
+        Assert.assertTrue(header.getText().contains("Music"));
+    }
+    public void searchDealsBotton(){
+        dealsBotton.click();
+        Assert.assertTrue(header.getText().contains("Deals"));
+    }
+    public void searchBussinesBotton(){
+        bussinesBotton.click();
+        Assert.assertTrue(header.getText().contains("Business & Industrial"));
+    }
+    public void searchSportingBotton(){
+        sportingBotton.click();
+        Assert.assertTrue(header.getText().contains("Sporting Goods & Equipment"));
+    }
+    public void searchtoysBotton(){
+        toysBotton.click();
+        Assert.assertTrue(header.getText().contains("Toys & Hobbies"));
+    }
+    public void searchHomeGardenBotton(){
+        homeGardenBotton.click();
+        Assert.assertTrue(header.getText().contains("Home & Garden"));
+    }
+    public void searchCollectiblesBotton(){
+        collectiblesBotton.click();
+        Assert.assertTrue(header.getText().contains("Collectibles & Art"));
+    }
+    public void searchElectronicBotton(){
+        electronicBotton.click();
+        Assert.assertTrue(header.getText().contains("Electronics"));
+    }
+    public void searchFashionBotton(){
+        fashionBotton.click();
+        Assert.assertTrue(header.getText().contains("Fashion"));
+
+    }
+    public void searchMotors(){
+        motorsBotton.click();
+        Assert.assertTrue(secHeader.getText().contains("eBay Motors"));
+    }
+
+    public void searchMyEbay(){
+        myEbay.click();
+        Assert.assertTrue(header.getText().contains("Please verify yourself to continue"));
+
+    }
 
     public void searchSell(){
         sell.click();
