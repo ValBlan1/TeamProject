@@ -29,10 +29,22 @@ public class MainTestCases extends CommonAPI {
     public static WebElement searchBotton;
     @FindBy(xpath = "//span[@class ='b-pageheader__text']")
     public static WebElement secHeader;
+    @FindBy(xpath = "(//li[@class ='gh-t gh-divider-l'])[3]")
+    public static WebElement helpContact;
+    @FindBy(xpath = "//li[@id ='gh-p-2']")
+    public static WebElement sell;
+    @FindBy(xpath = "//span[@class ='l-hero__title']")
+    public static WebElement sellheader;
 
+    public void searchSell(){
+        sell.click();
+        Assert.assertTrue(sellheader.getText().contains("Over 182 million shoppers"));
+    }
 
-
-
+    public void searchHealpContact() {
+        helpContact.click();
+        Assert.assertTrue(header.getText().contains("How can we help you today?"));
+    }
 
     public void searchProducts(){
         searchBox.sendKeys("Baby", Keys.ENTER);
@@ -116,4 +128,46 @@ public class MainTestCases extends CommonAPI {
         searchBox.sendKeys(Keys.ENTER);
         Assert.assertTrue(secHeader.getText().contains("Computers, Tablets & Network Hardware"));
     }
+    public void selectMenuConsumer() {
+        selectFromMenu("Consumer Electronics");
+        searchBox.sendKeys(Keys.ENTER);
+        Assert.assertTrue(secHeader.getText().contains("Consumer Electronics"));
+    }
+    public void selectMenuCrafts() {
+        selectFromMenu("Crafts");
+        searchBox.sendKeys(Keys.ENTER);
+        Assert.assertTrue(header.getText().contains("Make it Fun With Arts and Crafts"));
+    }
+    public void selectMenuDolls() {
+        selectFromMenu("Dolls & Bears");
+        searchBox.sendKeys(Keys.ENTER);
+        Assert.assertTrue(header.getText().contains("Dolls & Teddy Bears"));
+    }
+    public void selectMenuDdvd() {
+        selectFromMenu("DVDs & Movies");
+        searchBox.sendKeys(Keys.ENTER);
+        Assert.assertTrue(header.getText().contains("DVDs & Movies"));
+    }
+    public void selectMenuDEntert() {
+        selectFromMenu("Entertainment Memorabilia");
+        searchBox.sendKeys(Keys.ENTER);
+        Assert.assertTrue(header.getText().contains("Entertainment Memorabilia"));
+    }
+    public void selectMenuDGiftC() {
+        selectFromMenu("Gift Cards & Coupons");
+        searchBox.sendKeys(Keys.ENTER);
+        Assert.assertTrue(header.getText().contains("Gift Cards & Coupons"));
+    }
+    public void selectMenuHealth() {
+        selectFromMenu("Health & Beauty");
+        searchBox.sendKeys(Keys.ENTER);
+        Assert.assertTrue(header.getText().contains("Health & Beauty"));
+    }
+    public void selectMenuHomeGarden() {
+        selectFromMenu("Home & Garden");
+        searchBox.sendKeys(Keys.ENTER);
+        Assert.assertTrue(header.getText().contains("Home & Garden"));
+    }
+
+
 }

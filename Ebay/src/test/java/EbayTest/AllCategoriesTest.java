@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class EbayTests extends MainTestCases {
+public class AllCategoriesTest extends MainTestCases {
     MainTestCases mainTestCases;
 
     @BeforeMethod
@@ -14,23 +14,6 @@ public class EbayTests extends MainTestCases {
         mainTestCases = PageFactory.initElements(driver,MainTestCases.class);
     }
 
-    @Test
-    public void searchBox(){
-        searchProducts();
-    }
-
-    @Test
-    public void dailyDealsTest(){
-        searchDailyDeals();
-    }
-    @Test
-    public void BrandOutletTest(){
-        searchBrandOutlet();
-    }
-    @Test
-    public void TechAccesoriesTest(){
-        searchTechCase();
-    }
     @Test
     public void TestAllCategories(){
         selectFromMenu("Art");
@@ -79,4 +62,38 @@ public class EbayTests extends MainTestCases {
     public void testMenuCompu(){
         selectMenuCompu();
     }
+    @Test
+    public void testMenuConsumer(){
+        selectMenuConsumer();
+    }
+    @Test
+    public void testMenuCrafts(){
+        selectMenuCrafts();
+    }
+    @Test
+    public void testMenuDolls(){
+        selectMenuDolls();
+    }
+    @Test
+    public void testMenuDdvd(){
+        selectMenuDdvd();
+    }
+    @Test
+    public void testMenuDEntert(){
+        selectMenuDEntert();
+    }
+    @Test
+    public void testMenuDGiftC(){
+        selectMenuDGiftC();
+    }
+    @Test
+    public void testMenuHealth(){
+        selectMenuHealth();
+    }
+    @Test
+    public void testMenuHomeGarden(){
+        selectMenuHomeGarden();
+    }
+
+
 }
