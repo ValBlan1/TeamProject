@@ -15,7 +15,7 @@
     <test name = "Ebay Home">
 
         <classes>
-            <class name="EbayTest.AllCategoriesTest"/>
+            <class name="EbayTest.AllCategoriesTest"></class>
             <!--            <class name="search.DropDownMenu"></class>-->
         </classes>
 
