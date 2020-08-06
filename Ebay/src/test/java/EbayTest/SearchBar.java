@@ -20,5 +20,13 @@ public class SearchBar extends MainTestCases {
     public void testEmbroidered(){
         searchEmbroidered();
     }
+    @Test
+    public void testCandles(){
+        searchCandles();
+    }
+    @Test
+    public void testOptions(){
+        searchOptions();
+    }
 
 }

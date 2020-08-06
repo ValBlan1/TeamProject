@@ -4,10 +4,13 @@ import base.CommonAPI;
 import net.bytebuddy.asm.Advice;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+
+import java.util.logging.XMLFormatter;
 
 public class MainTestCases extends CommonAPI {
 
@@ -67,7 +70,26 @@ public class MainTestCases extends CommonAPI {
     public static WebElement signInBotton;
     @FindBy (xpath = "(//h3[@class='s-item__title s-item__title--has-tags'])[3]")
     public static WebElement daybedElem;
+    @FindBy (xpath = "(//li[@class='srp-refine__category__item'])[2]")
+    public static WebElement candleElem;
+    @FindBy (xpath = "(//li[@class='srp-refine__category__item'])[3]")
+    public static WebElement fraganceElem;
+    @FindBy (xpath = "(//h3[@class='x-refine__item'])[1]")
+    public static WebElement candleFragElem;
 
+
+    public void searchOptions(){
+        searchBox.sendKeys("candles", Keys.ENTER);
+        candleElem.click();
+        fraganceElem.click();
+        Assert.assertTrue(candleFragElem.getText().contains("Category"));
+
+    }
+
+    public void searchCandles(){
+        searchBox.sendKeys("candles", Keys.ENTER);
+        Assert.assertTrue(header.getText().contains("candles"));
+    }
     public void searchEmbroidered(){
         searchBox.sendKeys("embroidered", Keys.ENTER);
         Assert.assertTrue(header.getText().contains("embroidered"));

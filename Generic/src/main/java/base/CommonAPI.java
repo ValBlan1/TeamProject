@@ -35,6 +35,17 @@ public class CommonAPI {
     @Parameters({"url"})
     @BeforeMethod
     public void setUp(@Optional("https://www.ebay.com/") String url) {
+
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\jesse\\IdeaProjects\\TeamProject\\Generic\\driver\\chromedriver.exe");
+
+        driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
+        driver.get(url);
+    }
+    public void setUp2(@Optional("https://www.alibaba.com/") String url) {
+
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\jesse\\IdeaProjects\\TeamProject\\Generic\\driver\\chromedriver.exe");
 
         driver = new ChromeDriver();

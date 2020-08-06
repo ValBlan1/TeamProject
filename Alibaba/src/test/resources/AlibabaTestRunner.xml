@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name ="Ebay Test Script" parallel="false">
+<suite name ="alibaba Test Script" parallel="false">
 
     <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserstack"/>
-    <parameter name="url" value="https://www.ebay.com/"></parameter>
+    <parameter name="url" value="https://www.alibaba.com/"></parameter>
     <parameter name="os" value="OS X"/>
     <parameter name="os_version" value="Sierra"/>
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="75.0"/>
 
 
-    <test name = "Ebay Home">
+    <test name = "Alibaba Home">
 
         <classes>
-            <class name="EbayTest.AllCategoriesTest"></class>
-            <class name="EbayTest.HomePage"></class>
-            <class name="EbayTest.SearchBar"></class>
-            <class name="EbayTest.ShoppingCart"></class>
+            <class name="AlibabaTest.AliHomePage"></class>
+
             <!--            <class name="search.DropDownMenu"></class>-->
         </classes>
 
