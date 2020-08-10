@@ -16,4 +16,8 @@ public class AliHomePage extends MainTestCase {
     public void testSignIn(){
         searchSignIn();
     }
+    @Test
+    public void testNewArrivals(){
+        searchNewArrivals();
+    }
 }
