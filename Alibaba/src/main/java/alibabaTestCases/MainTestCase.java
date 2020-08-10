@@ -12,8 +12,7 @@ import org.testng.annotations.Parameters;
 import java.util.concurrent.TimeUnit;
 
 public class MainTestCase extends CommonAPI {
-
-    @Parameters({"url"})
+  /*  @Parameters({"url"})
     @BeforeMethod
     public void setUp(@Optional("https://www.alibaba.com/")  String url) {
 
@@ -24,7 +23,7 @@ public class MainTestCase extends CommonAPI {
         driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get(url);
-    }
+    }*/
 
     @FindBy( xpath = "//div[@class= 'sc-hd-download-link']")
     public static WebElement getAppBotton;

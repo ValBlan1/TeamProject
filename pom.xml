@@ -12,6 +12,7 @@
         <module>Generic</module>
         <module>Ebay</module>
         <module>Alibaba</module>
+        <module>NYP</module>
 
     </modules>
     <dependencyManagement>

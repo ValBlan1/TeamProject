@@ -6,13 +6,31 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
+import java.util.concurrent.TimeUnit;
 import java.util.logging.XMLFormatter;
 
 public class MainTestCases extends CommonAPI {
+
+    /*@Parameters({"url"})
+    @BeforeMethod
+    public void setUp(@Optional("https://www.ebay.com/")  String url) {
+
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\jesse\\IdeaProjects\\TeamProject\\Generic\\driver\\chromedriver.exe");
+
+        driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
+        driver.get(url);
+    }*/
 
     @FindBy(xpath = "//input[@class='gh-tb ui-autocomplete-input']" )
     public static WebElement searchBox;
